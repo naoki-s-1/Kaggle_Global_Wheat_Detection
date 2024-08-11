@@ -1,0 +1,2 @@
+# Kaggle_Global_Wheat_Detection
+Global Wheat Detectionコンペの記録
