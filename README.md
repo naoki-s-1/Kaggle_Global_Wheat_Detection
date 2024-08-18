@@ -68,3 +68,7 @@ for fold, (_, va_idx) in enumerate(gfk.split(X=df, y=df['source'],
                                    start=1):  
     df.loc[va_idx, 'fold'] = fold  
 
+### 2024-08-18 日曜日
+ようやく提出までたどり着けた！
+![image](https://github.com/user-attachments/assets/9c080e20-ae42-4405-afc8-1e2acfdf1620)  
+とりあえずこのスコアをベースにして進めていく
