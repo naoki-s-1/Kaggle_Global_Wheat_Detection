@@ -106,7 +106,7 @@ Noneをスライスに使う場合、テンソルの次元を拡張するため�
 
 1. lu = tf.maximum(boxes1_corners[:, None, :2], boxes2_corners[:, :2])
 
-_役割_
+役割
 - boxes1_corners[:, None, :2] では、boxes1_cornersテンソルの2番目の次元に新しい次元を追加しています。
 - これにより、boxes1_cornersはもともと (N, 4) の形状でしたが、[:, None, :2] の操作により (N, 1, 2) になります。
 
