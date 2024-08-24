@@ -87,3 +87,11 @@ def competitionMetric2(true, pred):
     trueNegatives = K.sum(trueNegatives) 
 
     return (truePositives + trueNegatives) / castF(K.shape(true)[0])
+
+## tf.stackとtf.concatとの動作の違い
+
+![image](https://github.com/user-attachments/assets/cd1e03d0-c8bd-4bc2-a5ee-7344130b043f)
+
+![image](https://github.com/user-attachments/assets/a8beb3e9-bc3e-4003-8d9c-2e418edda868)
+
+
