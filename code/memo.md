@@ -88,6 +88,7 @@ def competitionMetric2(true, pred):
 
     return (truePositives + trueNegatives) / castF(K.shape(true)[0])
 
+
 ## tf.stackとtf.concatとの動作の違い
 
 ![image](https://github.com/user-attachments/assets/cd1e03d0-c8bd-4bc2-a5ee-7344130b043f)
@@ -95,3 +96,36 @@ def competitionMetric2(true, pred):
 ![image](https://github.com/user-attachments/assets/a8beb3e9-bc3e-4003-8d9c-2e418edda868)
 
 
+<details open><summary>## スライスする時のNoneについて</summary>  
+
+
+
+Noneをスライスに使う場合、テンソルの次元を拡張するために使用されます。具体的には、Noneを挿入することで、指定した位置に新しい次元が追加されます。この新しい次元のサイズは1になります。
+
+以下に、lu = tf.maximum(boxes1_corners[:, None, :2], boxes2_corners[:, :2]) と union_area = tf.maximum(boxes1_area[:, None] + boxes2_area - intersection_area, 1e-8) のそれぞれについて解説します。
+
+1. lu = tf.maximum(boxes1_corners[:, None, :2], boxes2_corners[:, :2])
+
+_役割_
+- boxes1_corners[:, None, :2] では、boxes1_cornersテンソルの2番目の次元に新しい次元を追加しています。
+- これにより、boxes1_cornersはもともと (N, 4) の形状でしたが、[:, None, :2] の操作により (N, 1, 2) になります。
+
+なぜ必要か
+- tf.maximum関数で boxes1_corners と boxes2_corners を比較する際、形状を揃える必要があります。boxes1_corners が (N, 1, 2) になり、boxes2_corners[:, :2] が (M, 2) のとき、tf.maximum が要素ごとに N x M の比較を行うことが可能になります。
+- つまり、これにより lu の形状は (N, M, 2) となり、boxes1_corners の各要素が boxes2_corners の各要素とペアごとに比較されるようになります。
+
+2. union_area = tf.maximum(boxes1_area[:, None] + boxes2_area - intersection_area, 1e-8)
+
+役割
+- boxes1_area[:, None] では、boxes1_areaテンソルの1番目の次元に新しい次元を追加しています。
+- これにより、boxes1_areaはもともと (N,) の形状でしたが、[:, None] の操作により (N, 1) になります。
+
+なぜ必要か
+- boxes1_area[:, None] と boxes2_area を足し合わせる際、形状を (N, M) にする必要があります。
+- boxes1_area の形状が (N, 1) であり、boxes2_area が (M,) の場合、boxes1_area[:, None] + boxes2_area の結果は (N, M) になります。
+- こうして、boxes1_area の各要素が boxes2_area の各要素とペアごとに加算されるようになり、結果として union_area は (N, M) となります。
+
+まとめ
+
+Noneを使うことで、次元が拡張され、ブロードキャストが可能になります。ブロードキャストは、異なる形状のテンソル間で演算を行う際に非常に重要です。これにより、テンソルの形状が揃えられ、要素ごとの計算が正しく行われるようになります。
+</details>
