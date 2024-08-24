@@ -112,14 +112,14 @@
 
 このメソッドは、入力画像の高さと幅に基づいて全ての特徴マップレベルのアンカーボックスを生成します。
 
-- anchors = [
-            self._get_anchors(
-                tf.math.ceil(image_height / 2 ** i),
-                tf.math.ceil(image_width / 2 ** i),
-                i,
-            )
-            for i in range(3, 8)
-        ]
+- anchors = [  
+            self._get_anchors(  
+                tf.math.ceil(image_height / 2 ** i),  
+                tf.math.ceil(image_width / 2 ** i),  
+                i,  
+            )  
+            for i in range(3, 8)  
+        ]  
 
   - _get_anchorsを使用して、全ての特徴マップレベルに対してアンカーボックスを生成します。
 - self._get_anchors(tf.math.ceil(image_height / 2 ** i), tf.math.ceil(image_width / 2 ** i), i):
