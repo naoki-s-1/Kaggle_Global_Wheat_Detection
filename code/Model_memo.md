@@ -220,6 +220,8 @@ DecodePredictionsクラスは、RetinaNetモデルの予測をデコードし、
 
 ![image](https://github.com/user-attachments/assets/e7d7b080-2a79-4147-9b5e-7ed4e8c27c13)
 ![image](https://github.com/user-attachments/assets/5d431a93-4adc-481a-9ed7-4a2ffd2eef29)
+![image](https://github.com/user-attachments/assets/9c1632b8-ff15-41e8-a347-2cb1b8a2f199)
+![image](https://github.com/user-attachments/assets/de86878c-aaf7-41c7-8cfb-9ffdcb65a383)
 
 ![image](https://github.com/user-attachments/assets/e6d2238b-56a8-4959-81c1-85eb8958c020)
 ![image](https://github.com/user-attachments/assets/daeffeea-fac4-4b74-a7da-e2000cdefcfc)
