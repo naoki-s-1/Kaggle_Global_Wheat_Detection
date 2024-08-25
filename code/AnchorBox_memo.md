@@ -239,6 +239,7 @@ AnchorBoxクラスは、異なるスケールとアスペクト比を持つア�
 
 ![image](https://github.com/user-attachments/assets/5d7a050c-6e79-4b7e-b658-6e9f0a824e71)
 ![image](https://github.com/user-attachments/assets/2540f699-7bb0-4063-9d2e-71ac6d4f9d31)
+![image](https://github.com/user-attachments/assets/74442ac4-b546-49cc-a10a-5214acc84890)
 
 ![image](https://github.com/user-attachments/assets/2fabd843-b670-45c9-a38e-e6674d5f6b69)
 
@@ -263,3 +264,8 @@ AnchorBoxクラスは、異なるスケールとアスペクト比を持つア�
 
 各処理の意味と詳細
 - バッチ内の各サンプルに対して、アンカーボックスに適したターゲットを一括で生成し、効率的なトレーニングを実現します。
+
+![image](https://github.com/user-attachments/assets/05a23295-95f2-4f7f-b3f3-574b2ef37188)
+![image](https://github.com/user-attachments/assets/c8dcca81-b55b-47e7-8d4f-89d958457911)
+![image](https://github.com/user-attachments/assets/22433fee-6921-4320-957b-b65e9ecf3d73)
+![image](https://github.com/user-attachments/assets/35e3149d-6255-45b4-a9d5-2a45f32395d0)
