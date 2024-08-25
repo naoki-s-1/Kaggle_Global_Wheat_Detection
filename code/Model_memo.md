@@ -167,3 +167,11 @@ RetinaNet は境界ボックス回帰のためと、物体のクラス確率を�
   - この層は、出力チャンネル数を調整し、必要な出力数に一致させます（例: クラスのスコアやバウンディングボックスの座標）。
 
 ![image](https://github.com/user-attachments/assets/b3bfbfa4-c7b5-420a-b697-23d567dc88d1)
+
+
+## サブクラス化モデルを使用して RetinaNetを構築する
+
+![image](https://github.com/user-attachments/assets/7572066e-84ab-4f6f-a77e-897e24a5fd0d)
+![image](https://github.com/user-attachments/assets/3a0150ce-09c2-4183-88b0-aa06b63caa37)
+![image](https://github.com/user-attachments/assets/b2d3666a-ad10-4a91-97d8-ee15038503d5)
+![image](https://github.com/user-attachments/assets/3fa051ac-8b94-451f-9b5e-2ab7246866d8)
