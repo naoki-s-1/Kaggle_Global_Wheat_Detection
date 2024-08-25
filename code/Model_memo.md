@@ -207,3 +207,22 @@ RetinaNet は境界ボックス回帰のためと、物体のクラス確率を�
   - 出力: cls_outputs に追加される形状 [batch_size, num_boxes, num_classes] のテンソルで、各アンカーボックスに対するクラス確信度を表します。
 
 ![image](https://github.com/user-attachments/assets/f4079371-dd40-40c6-b09e-8d6c7f5fb1e9)
+
+
+## 予測をデコードするカスタム層の実装
+
+DecodePredictionsクラスは、RetinaNetモデルの予測をデコードし、予測バウンディングボックスを実際の画像空間に変換し、不要な検出を削除するための処理を行います。特に、ボックス予測のデコードと、非最大抑制 (NMS) を適用して、信頼性の低い予測をフィルタリングします。
+
+### 各メソッドの詳細
+
+![image](https://github.com/user-attachments/assets/ea8e1ecf-5ff2-4c18-bae1-2b8d3c0e80c0)
+![image](https://github.com/user-attachments/assets/7664fd1f-f965-4356-8e73-904a4cfb6d7e)
+
+![image](https://github.com/user-attachments/assets/5d431a93-4adc-481a-9ed7-4a2ffd2eef29)
+
+![image](https://github.com/user-attachments/assets/daeffeea-fac4-4b74-a7da-e2000cdefcfc)
+
+### 各処理ごとの詳細
+
+![image](https://github.com/user-attachments/assets/a0b15fe3-8588-4ef7-a3d3-1fda0c290f41)
+
