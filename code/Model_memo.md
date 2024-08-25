@@ -230,3 +230,48 @@ DecodePredictionsクラスは、RetinaNetモデルの予測をデコードし、
 
 ![image](https://github.com/user-attachments/assets/a0b15fe3-8588-4ef7-a3d3-1fda0c290f41)
 
+![image](https://github.com/user-attachments/assets/e7928b6b-d093-4513-b18a-b95f3ca7ff49)
+
+- boxes:
+
+  - 型と形状: tf.Tensor (形状: [batch_size, num_boxes, q, 4])
+  - 説明: 各検出のバウンディングボックスの座標を表すテンソルです。q は通常 1 ですが、q が 1 の場合はクラスごとに異なるボックスがあることを意味します。
+
+- scores:
+
+  - 型と形状: tf.Tensor (形状: [batch_size, num_boxes, num_classes])
+  - 説明: 各ボックスに対する各クラスの確信度（スコア）を表すテンソルです。
+
+- max_output_size_per_class:
+
+  - 型: int
+  - 説明: クラスごとに保持される最大検出数です。
+
+- max_total_size:
+
+  - 型: int
+  - 説明: 全体で保持される最大検出数です。
+
+- iou_threshold:
+
+  - 型: float
+  - 説明: NMSを適用する際のインターセクション・オーバー・ユニオン (IoU) の閾値です。この値を超える重複率のボックスは抑制されます。
+
+- score_threshold:
+
+  - 型: float
+  - 説明: この閾値を下回るスコアを持つ検出は無視されます。
+
+- clip_boxes:
+
+  - 型: bool
+  - 説明: 出力されたボックスを画像の境界内にクリップするかどうかを指定します。
+
+![image](https://github.com/user-attachments/assets/eaf35859-a00d-4e31-a135-ffc6f69c1ace)
+![image](https://github.com/user-attachments/assets/85428961-56e3-465b-898a-b3aad0f93151)
+
+まとめ
+
+- tf.image.combined_non_max_suppression は、オブジェクト検出モデルの出力を精緻化するための重要な関数です。
+- スコアとNMSによって重複するボックスが除去され、信頼度の高い検出結果が得られます。
+- 戻り値は、NMS後の検出結果のボックス、スコア、クラス、および有効な検出数です。
