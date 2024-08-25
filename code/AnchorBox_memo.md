@@ -1,3 +1,6 @@
+## アンカーgeneratorの実装
+
+アンカーボックスは、モデルが物体に対する境界ボックスを予測するために使用する固定サイズのボックスです。それは物体の中心の位置とアンカーボックスの中心の位置の間のオフセットを回帰することでこれを行ない、そして物体の相対的なスケールを予測するためにアンカーボックスの幅と高さを使用します。RetinaNet の場合は、与えられた特徴マップの各位置は (3 つのスケールと 3 つの比率の) 9 つのアンカーボックスを持ちます。
 
 ![image](https://github.com/user-attachments/assets/c2162428-12aa-4a56-9431-94d08070c62c)
 
@@ -152,22 +155,11 @@ AnchorBoxクラスは、異なるスケールとアスペクト比を持つア�
 - アンカーボックスを使用して分類と回帰ターゲットを生成する
 
 ![image](https://github.com/user-attachments/assets/d8ff9603-9510-4e8c-8a86-87a8f3ae1a70)
-
-概要
-
-クラスのインスタンスを初期化するコンストラクタです。
-
-処理の内容
-- self._anchor_box = AnchorBox(): アンカーボックスを生成するためのAnchorBoxクラスのインスタンスを初期化します。
-- self._box_variance = tf.convert_to_tensor([0.1, 0.1, 0.2, 0.2], dtype=tf.float32): バウンディングボックスターゲットのスケーリングに使用する係数を初期化します。
-
-入力と出力
-- 入力: なし
-- 出力: なし
+![image](https://github.com/user-attachments/assets/55b7aa27-6487-48ee-9d68-4ca68c516753)
 
 ![image](https://github.com/user-attachments/assets/6bdd4591-5fbe-4ca4-b049-d6533a6d7170)
+![image](https://github.com/user-attachments/assets/5d7f6b44-9178-459c-839f-6eb2670fc349)
 
-概要
 
 アンカーボックスとグラウンドトゥルースボックスの間のIoU（Intersection over Union）を計算し、それに基づいてアンカーボックスをマッチングします。
 
