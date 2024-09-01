@@ -161,3 +161,5 @@ self._box_variance は、ターゲットボックスをスケーリングする�
     - self._box_variance が [0.1, 0.1, 0.2, 0.2] の場合、オフセット部分は 0.1 で割られるので、値が 10 倍になります。これにより、オフセットが [0.0, 1.0] の範囲にあると仮定すると、スケーリング後の範囲は [0.0, 10.0] になります。
 2. スケーリング (log_width_scale, log_height_scale) の範囲:
     - log_width_scale や log_height_scale の部分は 0.2 で割られるので、値が 5 倍になります。これにより、ログ変換された値が通常の範囲内（たとえば、[-2, 2]）であれば、スケーリング後の範囲は [-10, 10] となります。
+
+![image](https://github.com/user-attachments/assets/97806815-f2a5-4c9d-8539-c3ccdb536cae)
