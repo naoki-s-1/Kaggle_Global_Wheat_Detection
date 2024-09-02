@@ -134,3 +134,6 @@ for fold, (_, va_idx) in enumerate(gfk.split(X=df, y=df['source'],
 
 ### 2024-08-24,25 土曜日,日曜日
 RetinaNetについて学ぶ
+
+### 2024-09-02 月曜日
+![image](https://github.com/user-attachments/assets/4abdbb55-2fd6-40db-bf0d-b01cd255ebef)
