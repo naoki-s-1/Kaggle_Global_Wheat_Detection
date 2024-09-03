@@ -135,5 +135,10 @@ for fold, (_, va_idx) in enumerate(gfk.split(X=df, y=df['source'],
 ### 2024-08-24,25 土曜日,日曜日
 RetinaNetについて学ぶ
 
+### Keras Unet
+
 ### 2024-09-02 月曜日
 ![image](https://github.com/user-attachments/assets/4abdbb55-2fd6-40db-bf0d-b01cd255ebef)
+
+### 2024-09-03 火曜日
+![image](https://github.com/user-attachments/assets/d1816e48-c49b-4e2c-bb7b-a2a8f0d007dd)
