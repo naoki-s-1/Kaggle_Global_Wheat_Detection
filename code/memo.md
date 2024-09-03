@@ -163,3 +163,14 @@ self._box_variance は、ターゲットボックスをスケーリングする�
     - log_width_scale や log_height_scale の部分は 0.2 で割られるので、値が 5 倍になります。これにより、ログ変換された値が通常の範囲内（たとえば、[-2, 2]）であれば、スケーリング後の範囲は [-10, 10] となります。
 
 ![image](https://github.com/user-attachments/assets/97806815-f2a5-4c9d-8539-c3ccdb536cae)
+
+![image](https://github.com/user-attachments/assets/a5594bc8-1f5d-42b1-b348-9ed0ad9610fe)
+#### マスク生成のループ
+
+1. masksという辞書を初期化します。ここにマスク画像を保存します。
+2. データフレーム df を image_id ごとにグループ化し、各グループごとに処理を行います。
+3. gp['polygons'] に各バウンディングボックスをポリゴンに変換したリストを格納します。gp['bbox'] は文字列として保存されているため、まず eval でリストに変換し、その後 make_polygon 関数を適用します。
+4. 画像サイズ (IMG_WIDTH, IMG_HEIGHT) で新しい画像（マスク画像）を作成し、全てのピクセルを0（黒）で初期化します。
+5. ポリゴンをマスク画像に描画し、ポリゴンの内部を1（白）で塗りつぶします。
+6. マスク画像をNumPy配列に変換し、masks 辞書に img_id をキーとして追加します。
+![image](https://github.com/user-attachments/assets/f62d4b1f-e1f8-4df8-b423-773d63797564)
