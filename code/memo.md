@@ -176,3 +176,10 @@ self._box_variance は、ターゲットボックスをスケーリングする�
 5. ポリゴンをマスク画像に描画し、ポリゴンの内部を1（白）で塗りつぶします。
 6. マスク画像をNumPy配列に変換し、masks 辞書に img_id をキーとして追加します。
 ![image](https://github.com/user-attachments/assets/f62d4b1f-e1f8-4df8-b423-773d63797564)
+
+
+![image](https://github.com/user-attachments/assets/6cb4e565-df75-48d6-ae25-5c9246bcb02f)
+![image](https://github.com/user-attachments/assets/81daa42e-35f7-4b74-8951-05f4e92b9f3a)
+![image](https://github.com/user-attachments/assets/7109a3ee-8746-4d0c-adac-8a833e8a8a20)
+![image](https://github.com/user-attachments/assets/a31f5de9-424a-4a2c-a3f7-47fb1eed9efa)
+
