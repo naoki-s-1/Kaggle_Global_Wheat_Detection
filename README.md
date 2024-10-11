@@ -36,7 +36,6 @@ yolov5を使ってテストしたがsubmission.csvがうまく作成されず提
   - ImageOps.fit 関数は、Pillowライブラリに含まれる ImageOps モジュールのメソッドで、指定された画像を指定のサイズに収めるためにリサイズする機能を持っています。この処理では、アスペクト比（縦横比）を保持しつつ、画像の中央部分が希望のサイズに収まるようにトリミングされます。
 
 ### 2024-08-14 水曜日
-チャットGPTを駆使するも複雑でベースモデルのサブミットまでたどり着けず。
 
 ### 2024-08-16 金曜日
 進展なし
@@ -69,9 +68,8 @@ for fold, (_, va_idx) in enumerate(gfk.split(X=df, y=df['source'],
     df.loc[va_idx, 'fold'] = fold  
 
 ### 2024-08-18 日曜日
-ようやく提出までたどり着けた！
-![image](https://github.com/user-attachments/assets/9c080e20-ae42-4405-afc8-1e2acfdf1620)  
-とりあえずこのスコアをベースにして進めていく
+ようやく提出！
+![image](https://github.com/user-attachments/assets/9c080e20-ae42-4405-afc8-1e2acfdf1620) 
 
 ### 2024-08-20 火曜日
 #### 物体検出の出力について
